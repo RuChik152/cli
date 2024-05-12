@@ -1,6 +1,7 @@
 package main
 
 import (
+	"cli_hash/gui"
 	"crypto/md5"
 	"flag"
 	"fmt"
@@ -9,6 +10,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"time"
 
 	"github.com/cheggaaa/pb/v3"
 )
@@ -19,16 +21,25 @@ const HASH_LOG string = "hash_sum.log"
 
 var path_log *string
 var path_source *string
+var user_gui *bool
 
 func init() {
+	fmt.Println("Initialization...")
 	initArgs()
 }
 
 func main() {
-	createHashSummFile(*path_source)
 
-	fmt.Println("Press Enter to exit...")
-	fmt.Scanln()
+	if *user_gui {
+		gui.StartGui(path_log, path_source)
+		println(*path_log)
+		println(*path_source)
+	}
+
+	println(*path_log)
+	println(*path_source)
+	startScan()
+
 }
 
 func createHashSummFile(path string) {
@@ -98,5 +109,16 @@ func appendFileData(path string, data string) {
 func initArgs() {
 	path_log = flag.String("log", filepath.Join(".", HASH_LOG), "path for logs")
 	path_source = flag.String("s", filepath.Join("."), "path to the directory to scan")
+	user_gui = flag.Bool("g", false, "On or Off GUI")
 	flag.Parse()
+}
+
+func startScan() {
+	start := time.Now()
+	createHashSummFile(*path_source)
+	elapsed := time.Since(start)
+
+	fmt.Printf("Time spent: %s \n", elapsed)
+	fmt.Println("Press Enter to exit...")
+	fmt.Scanln()
 }
