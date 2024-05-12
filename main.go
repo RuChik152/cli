@@ -2,6 +2,7 @@ package main
 
 import (
 	"crypto/md5"
+	"flag"
 	"fmt"
 	"io"
 	"io/fs"
@@ -12,15 +13,24 @@ import (
 
 type MD5 string
 
+const HASH_LOG string = "hash_sum.log"
+
+var path_log *string
+var path_source *string
+
+func init() {
+	initArgs()
+}
+
 func main() {
-	createHashSummFile(".")
+	createHashSummFile(*path_source)
 }
 
 func createHashSummFile(path string) {
-	if err := os.Remove("./hash_sum.log"); err != nil {
+	if err := os.Remove(*path_log); err != nil {
 		println(err.Error())
 	}
-	appendFileData("./hash_sum.log", fmt.Sprintf("%-80s %-80s %s\n", "PATH", "NAME", "HASH"))
+	appendFileData(*path_log, fmt.Sprintf("%-150s %-50s %s\n", "PATH", "NAME", "HASH"))
 	filepath.Walk(path, func(wPath string, info fs.FileInfo, err error) error {
 
 		if info.IsDir() {
@@ -28,8 +38,8 @@ func createHashSummFile(path string) {
 		}
 
 		if wPath != path {
-			data := fmt.Sprintf("%-80s %-80s %s\n", wPath, info.Name(), hashSum(wPath))
-			appendFileData("./hash_sum.log", data)
+			data := fmt.Sprintf("%-150s %-50s %s\n", wPath, info.Name(), hashSum(wPath))
+			appendFileData(*path_log, data)
 		}
 		return nil
 	})
@@ -38,7 +48,7 @@ func createHashSummFile(path string) {
 func hashSum(path string) MD5 {
 	file, err := os.Open(path)
 	if err != nil {
-		log.Println("ошибка открытия файла: ", err)
+		log.Println("Error open file or dir: ", err)
 	}
 	defer file.Close()
 
@@ -62,4 +72,10 @@ func appendFileData(path string, data string) {
 	if _, err = file.WriteString(data); err != nil {
 		panic(err)
 	}
+}
+
+func initArgs() {
+	path_log = flag.String("log", filepath.Join(".", HASH_LOG), "path for logs")
+	path_source = flag.String("s", filepath.Join("."), "path to the directory to scan")
+	flag.Parse()
 }

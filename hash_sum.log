@@ -1,4 +1,32 @@
 PATH                                                                             NAME                                                                             HASH
+.git\HEAD                                                                        HEAD                                                                             cf7dd3ce51958c5f13fece957cc417fb
+.git\config                                                                      config                                                                           876a466732352b2831af8d7a4e748ca8
+.git\description                                                                 description                                                                      a0a7c3fff21f2aea3cfa1d0316dd816c
+.git\hooks\applypatch-msg.sample                                                 applypatch-msg.sample                                                            ce562e08d8098926a3862fc6e7905199
+.git\hooks\commit-msg.sample                                                     commit-msg.sample                                                                579a3c1e12a1e74a98169175fb913012
+.git\hooks\fsmonitor-watchman.sample                                             fsmonitor-watchman.sample                                                        a0b2633a2c8e97501610bd3f73da66fc
+.git\hooks\post-update.sample                                                    post-update.sample                                                               2b7ea5cee3c49ff53d41e00785eb974c
+.git\hooks\pre-applypatch.sample                                                 pre-applypatch.sample                                                            054f9ffb8bfe04a599751cc757226dda
+.git\hooks\pre-commit.sample                                                     pre-commit.sample                                                                305eadbbcd6f6d2567e033ad12aabbc4
+.git\hooks\pre-merge-commit.sample                                               pre-merge-commit.sample                                                          39cb268e2a85d436b9eb6f47614c3cbc
+.git\hooks\pre-push.sample                                                       pre-push.sample                                                                  2c642152299a94e05ea26eae11993b13
+.git\hooks\pre-rebase.sample                                                     pre-rebase.sample                                                                56e45f2bcbc8226d2b4200f7c46371bf
+.git\hooks\pre-receive.sample                                                    pre-receive.sample                                                               2ad18ec82c20af7b5926ed9cea6aeedd
+.git\hooks\prepare-commit-msg.sample                                             prepare-commit-msg.sample                                                        2b5c047bdb474555e1787db32b2d2fc5
+.git\hooks\push-to-checkout.sample                                               push-to-checkout.sample                                                          c7ab00c7784efeadad3ae9b228d4b4db
+.git\hooks\sendemail-validate.sample                                             sendemail-validate.sample                                                        4d67df3a8d5c98cb8565c07e42be0b04
+.git\hooks\update.sample                                                         update.sample                                                                    647ae13c682f7827c22f5fc08a03674e
+.git\index                                                                       index                                                                            2cc26b45d61bc54c4a66e408743f09a3
+.git\info\exclude                                                                exclude                                                                          036208b4a1ab4a235d75c181e685e5a3
+.git\logs\HEAD                                                                   HEAD                                                                             ca7ccca020d3fcffe81227710dfd9bc6
+.git\logs\refs\heads\main                                                        main                                                                             ca7ccca020d3fcffe81227710dfd9bc6
+.git\logs\refs\remotes\origin\HEAD                                               HEAD                                                                             ca7ccca020d3fcffe81227710dfd9bc6
+.git\objects\pack\pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.idx              pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.idx                                e90f965310f1fc42f7346ef5378a6eb5
+.git\objects\pack\pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.pack             pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.pack                               a0c3729ef223add5ba016a6b22998127
+.git\objects\pack\pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.rev              pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.rev                                4b86ec8fc804d52b043a38cc683830da
+.git\packed-refs                                                                 packed-refs                                                                      938f5e90fda24b2500320a1424bb59be
+.git\refs\heads\main                                                             main                                                                             4b886f28215f906d7a4c33c06876ae61
+.git\refs\remotes\origin\HEAD                                                    HEAD                                                                             98b16e0b650190870f1b40bc8f4aec4e
 cli_hash.exe                                                                     cli_hash.exe                                                                     7c3cdff79e264adb17ad0c6b920289fe
 dffdf\23123123\test — копия.txt                                                  test — копия.txt                                                                 1bf78ecb1f95307077167a37a64ee490
 dffdf\23123123\test.txt                                                          test.txt                                                                         d41d8cd98f00b204e9800998ecf8427e
@@ -6,6 +34,6 @@ dffdf\23123123\Документ Microsoft Word.docx                             
 dffdf\test — копия.txt                                                           test — копия.txt                                                                 647eaf0e12a1ed0104754263f036f9fc
 dffdf\test.txt                                                                   test.txt                                                                         d41d8cd98f00b204e9800998ecf8427e
 dffdf\Документ Microsoft Word.docx                                               Документ Microsoft Word.docx                                                     d41d8cd98f00b204e9800998ecf8427e
-go.mod                                                                           go.mod                                                                           4b9568418b637d50dfca3ce370e9d146
-hash_sum.log                                                                     hash_sum.log                                                                     fc16870f17c789e1f759340b16967d58
-main.go                                                                          main.go                                                                          4faba4756ba140bfc24d17d59c4795b7
+go.mod                                                                           go.mod                                                                           240d3bab48f35406ce1ba44cd2eb3d5b
+hash_sum.log                                                                     hash_sum.log                                                                     d2490768f31895916a6a93b3fec2dbe4
+main.go                                                                          main.go                                                                          2de4119dcc1f106fe3fd66d20658d3e9
