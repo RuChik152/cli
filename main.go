@@ -9,6 +9,8 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+
+	"github.com/cheggaaa/pb/v3"
 )
 
 type MD5 string
@@ -24,6 +26,9 @@ func init() {
 
 func main() {
 	createHashSummFile(*path_source)
+
+	fmt.Println("Press Enter to exit...")
+	fmt.Scanln()
 }
 
 func createHashSummFile(path string) {
@@ -31,6 +36,19 @@ func createHashSummFile(path string) {
 		println(err.Error())
 	}
 	appendFileData(*path_log, fmt.Sprintf("%-150s %-50s %s\n", "PATH", "NAME", "HASH"))
+
+	var totalFilesCount int
+
+	filepath.Walk(path, func(path string, info fs.FileInfo, err error) error {
+		if !info.IsDir() {
+			totalFilesCount++
+		}
+
+		return nil
+	})
+
+	bar := pb.StartNew(totalFilesCount)
+
 	filepath.Walk(path, func(wPath string, info fs.FileInfo, err error) error {
 
 		if info.IsDir() {
@@ -41,8 +59,11 @@ func createHashSummFile(path string) {
 			data := fmt.Sprintf("%-150s %-50s %s\n", wPath, info.Name(), hashSum(wPath))
 			appendFileData(*path_log, data)
 		}
+		bar.Increment()
 		return nil
 	})
+	bar.Finish()
+
 }
 
 func hashSum(path string) MD5 {
