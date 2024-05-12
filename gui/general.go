@@ -40,6 +40,7 @@ func StartGui(hashFile *string, pathFolder *string) {
 		}
 	}()
 
+	w.Resize(fyne.NewSize(800, 600))
 	w.ShowAndRun()
 
 }

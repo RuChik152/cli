@@ -17,14 +17,15 @@ prepare-commit-msg.sample                          2b5c047bdb474555e1787db32b2d2
 push-to-checkout.sample                            c7ab00c7784efeadad3ae9b228d4b4db                  
 sendemail-validate.sample                          4d67df3a8d5c98cb8565c07e42be0b04                  
 update.sample                                      647ae13c682f7827c22f5fc08a03674e                  
-index                                              891e6e42c53602a137b81a98b8ab77b9                  
+index                                              731ae80e25230aef5d626d50ade3227d                  
 exclude                                            036208b4a1ab4a235d75c181e685e5a3                  
-HEAD                                               9caee616f72b3a88b6cdb12d8042fcd3                  
-main                                               9caee616f72b3a88b6cdb12d8042fcd3                  
+HEAD                                               a88d7cf4d6f1bb65e4b00b1b5a852b70                  
+main                                               a88d7cf4d6f1bb65e4b00b1b5a852b70                  
 HEAD                                               ca7ccca020d3fcffe81227710dfd9bc6                  
-main                                               ae1bbc8605dacacb9142004ec06668ef                  
+main                                               b7be7c30faba7dd918af7302abe9fbb1                  
 314969a78c41434c096e61343e30e7d0db72d8             4985d4c39e8a2160918e250b99403c30                  
 79bc87e2c60d4dc5bac5b69172f18cb03a0fa8             88766491a61644e4aa6b354c7d646eaf                  
+37cc026294e0b5b00a5f69e3e5e0e1d58fd0d0             1ff47081fd7c9989223623c30f27930a                  
 4c0834eec05dd1b0590e4eb40e989e6933ec0a             99b68120834f785cdc353ee4b675aa6b                  
 e287a1d3395362d9dbeaaacf0119db7a273352             1558b2de34b5668ab79f1e34e6259ef4                  
 44faf9b56fa4e84876c0fbb08be133e0f882a5             5cfddc8e67fcf63b521ef90d8bd390cd                  
@@ -42,19 +43,25 @@ bdf282543df3001471360cb97c2edc559168f0             19a0f8f54e6ce427ccd86b293efbb
 0c87892bd49e6059a10e40bc98e10d3efc0b8b             600d1f05105d0608b82a84094c9f2ff1                  
 120dc00ee7cb15df189f55a6f440066bed1cbd             cd45bb7094c5bff9dcf97f571fd100ea                  
 8fa97ec657ff3e9244d1a4b2c915437ea99bca             347c8e3642cfa109ac2188ca62594c27                  
+d7495ffe2307060c44d7499fb035cc34264905             20c1caa9fe1b3610091ed5e71f08043a                  
 1f63e010c9dacc4e2fb6bb89ebf71bcebd64ba             233ff7b2548fa132701f40f5d3a5ab62                  
 664fe09b62d2854ee920ef78a5297b43369cc1             aa570460f23d87b25a30c82a80640e41                  
+f077033b4ece0953da023b1c841af3398405bc             39bda32c115cc2a8dd043f10caf64526                  
 0b399079fea5fbe829a5a1465aa6488562918a             983845ead2466cb79e6d1a46ce22e5f5                  
+695e222f94ba5725bac19958c362fc6ad2589e             770c081e095288cac2ddc0f0b7c66b61                  
+b3f6d9d799b66173d12929155b011b520f2692             f6a205b152fcc8d56c53daf2cea174ce                  
 95479231b3acba002e7a544e8e03fe016904f9             8fdab1098adafd7c1975b2791f25619d                  
 38a5c9b5e5c04533394cad5acca2ac52781464             47503de2bbc6ba24a5c73fd122b259c1                  
+02f3a1d20c661041327406c7af873f9c0a4f0a             78a98ed6a9d8677a8308b762452f5696                  
+9060067e6897c7e4f7aa99507754b9b730b6c3             1f9d9f7839cc04d36cfe34df985f19b8                  
 pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.idx  e90f965310f1fc42f7346ef5378a6eb5                  
 pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.pack a0c3729ef223add5ba016a6b22998127                  
 pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.rev  4b86ec8fc804d52b043a38cc683830da                  
 packed-refs                                        938f5e90fda24b2500320a1424bb59be                  
-main                                               2153aa9d5f8580abe9b166ef7ce39dad                  
+main                                               c473659cb964b3c7970735890ede6355                  
 HEAD                                               98b16e0b650190870f1b40bc8f4aec4e                  
-main                                               787883ef95230dcf56130a9770138008                  
-cli_hash.exe                                       d35482f5d6d94d1af309845d255306d2                  
+main                                               c473659cb964b3c7970735890ede6355                  
+cli_hash.exe                                       8762902b05a6fffedcd0285649a17935                  
 test — копия.txt                                   1bf78ecb1f95307077167a37a64ee490                  
 test.txt                                           d41d8cd98f00b204e9800998ecf8427e                  
 Документ Microsoft Word.docx                       d41d8cd98f00b204e9800998ecf8427e                  
@@ -63,6 +70,6 @@ test.txt                                           d41d8cd98f00b204e9800998ecf84
 Документ Microsoft Word.docx                       d41d8cd98f00b204e9800998ecf8427e                  
 go.mod                                             039c9c138ce37feb4026adfbf75cbf40                  
 go.sum                                             4b5d3c221f72be1c82f24c4822a849ac                  
-general.go                                         1449002f1aa86c841a15de6f26276d43                  
-hash_sum.log                                       ace97f3fa460dbb35b97842ce58766c0                  
+general.go                                         ea921ba352e65a7a11ad157918797829                  
+hash_sum.log                                       fc260898830d925fbf9fdfd27f3b2e16                  
 main.go                                            95b0ff969cca7274f72102f571d2c715                  
