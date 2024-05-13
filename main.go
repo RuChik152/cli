@@ -48,8 +48,7 @@ func createHashSummFile(path string) {
 	if err := os.Remove(*path_log); err != nil {
 		println(err.Error())
 	}
-	appendFileData(*path_log, fmt.Sprintf("%-150s %-50s %s\n", "PATH", "NAME", "HASH"))
-	//appendFileData(*path_log, fmt.Sprintf("%-50s %-50s\n", "NAME", "HASH"))
+	appendFileData(*path_log, fmt.Sprintf("%-100s %-50s %s\n", "PATH", "NAME", "HASH"))
 
 	var totalFilesCount int
 
@@ -91,8 +90,7 @@ func createHashSummFile(path string) {
 		}
 
 		if wPath != path {
-			appendFileData(*path_log, fmt.Sprintf("%-150s %-50s %s\n", "."+wPath[len_path_source:], info.Name(), hashSum(wPath)))
-			//appendFileData(*path_log, fmt.Sprintf("%-50s %-50s\n", info.Name(), hashSum(wPath)))
+			appendFileData(*path_log, fmt.Sprintf("%-100s %-50s %s\n", "."+wPath[len_path_source:], info.Name(), hashSum(wPath)))
 		}
 		bar.Increment()
 		return nil
