@@ -10,6 +10,7 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"regexp"
 	"time"
 
 	"github.com/cheggaaa/pb/v3"
@@ -22,6 +23,7 @@ const HASH_LOG string = "hash_sum.log"
 var path_log *string
 var path_source *string
 var user_gui *bool
+var len_path_source int = 0
 
 func init() {
 	fmt.Println("Initialization...")
@@ -46,12 +48,25 @@ func createHashSummFile(path string) {
 	if err := os.Remove(*path_log); err != nil {
 		println(err.Error())
 	}
-	//appendFileData(*path_log, fmt.Sprintf("%-150s %-50s %s\n", "PATH", "NAME", "HASH"))
-	appendFileData(*path_log, fmt.Sprintf("%-50s %-50s\n", "NAME", "HASH"))
+	appendFileData(*path_log, fmt.Sprintf("%-150s %-50s %s\n", "PATH", "NAME", "HASH"))
+	//appendFileData(*path_log, fmt.Sprintf("%-50s %-50s\n", "NAME", "HASH"))
 
 	var totalFilesCount int
 
-	filepath.Walk(path, func(path string, info fs.FileInfo, err error) error {
+	filepath.Walk(path, func(wpath string, info fs.FileInfo, err error) error {
+
+		if info.IsDir() {
+			re := regexp.MustCompile(`^\.+`)
+			match := re.MatchString(info.Name())
+
+			reLib := regexp.MustCompile(`^(L|l)ibrary`)
+			matchLib := reLib.MatchString(info.Name())
+			if match || matchLib {
+				return filepath.SkipDir
+			}
+			return nil
+		}
+
 		if !info.IsDir() {
 			totalFilesCount++
 		}
@@ -64,12 +79,20 @@ func createHashSummFile(path string) {
 	filepath.Walk(path, func(wPath string, info fs.FileInfo, err error) error {
 
 		if info.IsDir() {
+			re := regexp.MustCompile(`^\.+`)
+			match := re.MatchString(info.Name())
+
+			reLib := regexp.MustCompile(`^(L|l)ibrary`)
+			matchLib := reLib.MatchString(info.Name())
+			if match || matchLib {
+				return filepath.SkipDir
+			}
 			return nil
 		}
 
 		if wPath != path {
-			//appendFileData(*path_log, fmt.Sprintf("%-150s %-50s %s\n", wPath, info.Name(), hashSum(wPath)))
-			appendFileData(*path_log, fmt.Sprintf("%-50s %-50s\n", info.Name(), hashSum(wPath)))
+			appendFileData(*path_log, fmt.Sprintf("%-150s %-50s %s\n", "."+wPath[len_path_source:], info.Name(), hashSum(wPath)))
+			//appendFileData(*path_log, fmt.Sprintf("%-50s %-50s\n", info.Name(), hashSum(wPath)))
 		}
 		bar.Increment()
 		return nil
@@ -108,8 +131,16 @@ func appendFileData(path string, data string) {
 }
 
 func initArgs() {
-	path_log = flag.String("log", filepath.Join(".", HASH_LOG), "path for logs")
-	path_source = flag.String("s", filepath.Join("."), "path to the directory to scan")
+
+	cwd, err := os.Getwd()
+	if err != nil {
+		cwd = "."
+	} else {
+		len_path_source = len(cwd)
+	}
+
+	path_log = flag.String("log", filepath.Join(cwd, HASH_LOG), "path for logs")
+	path_source = flag.String("s", filepath.Join(cwd), "path to the directory to scan")
 	user_gui = flag.Bool("g", false, "On or Off GUI")
 	flag.Parse()
 }

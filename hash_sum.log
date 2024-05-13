@@ -1,75 +1,13 @@
-NAME                                               HASH                                              
-COMMIT_EDITMSG                                     9a0c08647b2864d966e8adda626faa99                  
-HEAD                                               cf7dd3ce51958c5f13fece957cc417fb                  
-config                                             876a466732352b2831af8d7a4e748ca8                  
-description                                        a0a7c3fff21f2aea3cfa1d0316dd816c                  
-applypatch-msg.sample                              ce562e08d8098926a3862fc6e7905199                  
-commit-msg.sample                                  579a3c1e12a1e74a98169175fb913012                  
-fsmonitor-watchman.sample                          a0b2633a2c8e97501610bd3f73da66fc                  
-post-update.sample                                 2b7ea5cee3c49ff53d41e00785eb974c                  
-pre-applypatch.sample                              054f9ffb8bfe04a599751cc757226dda                  
-pre-commit.sample                                  305eadbbcd6f6d2567e033ad12aabbc4                  
-pre-merge-commit.sample                            39cb268e2a85d436b9eb6f47614c3cbc                  
-pre-push.sample                                    2c642152299a94e05ea26eae11993b13                  
-pre-rebase.sample                                  56e45f2bcbc8226d2b4200f7c46371bf                  
-pre-receive.sample                                 2ad18ec82c20af7b5926ed9cea6aeedd                  
-prepare-commit-msg.sample                          2b5c047bdb474555e1787db32b2d2fc5                  
-push-to-checkout.sample                            c7ab00c7784efeadad3ae9b228d4b4db                  
-sendemail-validate.sample                          4d67df3a8d5c98cb8565c07e42be0b04                  
-update.sample                                      647ae13c682f7827c22f5fc08a03674e                  
-index                                              731ae80e25230aef5d626d50ade3227d                  
-exclude                                            036208b4a1ab4a235d75c181e685e5a3                  
-HEAD                                               a88d7cf4d6f1bb65e4b00b1b5a852b70                  
-main                                               a88d7cf4d6f1bb65e4b00b1b5a852b70                  
-HEAD                                               ca7ccca020d3fcffe81227710dfd9bc6                  
-main                                               b7be7c30faba7dd918af7302abe9fbb1                  
-314969a78c41434c096e61343e30e7d0db72d8             4985d4c39e8a2160918e250b99403c30                  
-79bc87e2c60d4dc5bac5b69172f18cb03a0fa8             88766491a61644e4aa6b354c7d646eaf                  
-37cc026294e0b5b00a5f69e3e5e0e1d58fd0d0             1ff47081fd7c9989223623c30f27930a                  
-4c0834eec05dd1b0590e4eb40e989e6933ec0a             99b68120834f785cdc353ee4b675aa6b                  
-e287a1d3395362d9dbeaaacf0119db7a273352             1558b2de34b5668ab79f1e34e6259ef4                  
-44faf9b56fa4e84876c0fbb08be133e0f882a5             5cfddc8e67fcf63b521ef90d8bd390cd                  
-639b10f23968e775f8310c800ce04dc9b794ce             7fd41cffb764f1c1e30776a780fb2d86                  
-2c92d009db6eb46ea4e68f17d026fc21e645a5             77e5bbfc9b75a06138de0b2c8785f71d                  
-c3f196cd12877152b2bd07fff1ec2219adced2             f348b76a3a8941a0a8ebe266a793b0fe                  
-de601505af2e36c0fe4b30c86062143ea7e419             bdd1cd895934eb2b0c6b6d84d109ee99                  
-b626a64d15e2e1715f6d25b2e4b39f85580f5d             a74fb78673a72ad8d84d57e921f3eae4                  
-26e9233a86125bb4b3e1169ec35b25abe85668             742b3b3dc2dbde9e1b0f7125bd256a3c                  
-09513f563aab7c579263b62e5fa0f887d804e7             41e9bfa22fc30cda2393b7a4c1aa2a30                  
-bdf282543df3001471360cb97c2edc559168f0             19a0f8f54e6ce427ccd86b293efbb9f8                  
-63e84a13e1e95ab41232105ace248cf87a8dcd             ffefa10da41348e071891972b1ae5cd4                  
-9dcb85ea7ca7a2845468fd5b7ff49c18294585             9db113803ce6868caf2b44211bc826da                  
-86e5060bfb99424e620cd6154ac34f4da3dd3c             156f9c8a07912c25512c44fcd22881fb                  
-0c87892bd49e6059a10e40bc98e10d3efc0b8b             600d1f05105d0608b82a84094c9f2ff1                  
-120dc00ee7cb15df189f55a6f440066bed1cbd             cd45bb7094c5bff9dcf97f571fd100ea                  
-8fa97ec657ff3e9244d1a4b2c915437ea99bca             347c8e3642cfa109ac2188ca62594c27                  
-d7495ffe2307060c44d7499fb035cc34264905             20c1caa9fe1b3610091ed5e71f08043a                  
-1f63e010c9dacc4e2fb6bb89ebf71bcebd64ba             233ff7b2548fa132701f40f5d3a5ab62                  
-664fe09b62d2854ee920ef78a5297b43369cc1             aa570460f23d87b25a30c82a80640e41                  
-f077033b4ece0953da023b1c841af3398405bc             39bda32c115cc2a8dd043f10caf64526                  
-0b399079fea5fbe829a5a1465aa6488562918a             983845ead2466cb79e6d1a46ce22e5f5                  
-695e222f94ba5725bac19958c362fc6ad2589e             770c081e095288cac2ddc0f0b7c66b61                  
-b3f6d9d799b66173d12929155b011b520f2692             f6a205b152fcc8d56c53daf2cea174ce                  
-95479231b3acba002e7a544e8e03fe016904f9             8fdab1098adafd7c1975b2791f25619d                  
-38a5c9b5e5c04533394cad5acca2ac52781464             47503de2bbc6ba24a5c73fd122b259c1                  
-02f3a1d20c661041327406c7af873f9c0a4f0a             78a98ed6a9d8677a8308b762452f5696                  
-9060067e6897c7e4f7aa99507754b9b730b6c3             1f9d9f7839cc04d36cfe34df985f19b8                  
-pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.idx  e90f965310f1fc42f7346ef5378a6eb5                  
-pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.pack a0c3729ef223add5ba016a6b22998127                  
-pack-8bf16ceb5416874dcd039ac84f2a905a58f9dfcf.rev  4b86ec8fc804d52b043a38cc683830da                  
-packed-refs                                        938f5e90fda24b2500320a1424bb59be                  
-main                                               c473659cb964b3c7970735890ede6355                  
-HEAD                                               98b16e0b650190870f1b40bc8f4aec4e                  
-main                                               c473659cb964b3c7970735890ede6355                  
-cli_hash.exe                                       8762902b05a6fffedcd0285649a17935                  
-test — копия.txt                                   1bf78ecb1f95307077167a37a64ee490                  
-test.txt                                           d41d8cd98f00b204e9800998ecf8427e                  
-Документ Microsoft Word.docx                       d41d8cd98f00b204e9800998ecf8427e                  
-test — копия.txt                                   647eaf0e12a1ed0104754263f036f9fc                  
-test.txt                                           d41d8cd98f00b204e9800998ecf8427e                  
-Документ Microsoft Word.docx                       d41d8cd98f00b204e9800998ecf8427e                  
-go.mod                                             039c9c138ce37feb4026adfbf75cbf40                  
-go.sum                                             4b5d3c221f72be1c82f24c4822a849ac                  
-general.go                                         ea921ba352e65a7a11ad157918797829                  
-hash_sum.log                                       fc260898830d925fbf9fdfd27f3b2e16                  
-main.go                                            95b0ff969cca7274f72102f571d2c715                  
+PATH                                                                                                                                                   NAME                                               HASH
+.\cli_hash.exe                                                                                                                                         cli_hash.exe                                       7abc7b140108eecd2b2df9aeb782227f
+.\dffdf\23123123\test — копия.txt                                                                                                                      test — копия.txt                                   1bf78ecb1f95307077167a37a64ee490
+.\dffdf\23123123\test.txt                                                                                                                              test.txt                                           d41d8cd98f00b204e9800998ecf8427e
+.\dffdf\23123123\Документ Microsoft Word.docx                                                                                                          Документ Microsoft Word.docx                       d41d8cd98f00b204e9800998ecf8427e
+.\dffdf\test — копия.txt                                                                                                                               test — копия.txt                                   647eaf0e12a1ed0104754263f036f9fc
+.\dffdf\test.txt                                                                                                                                       test.txt                                           d41d8cd98f00b204e9800998ecf8427e
+.\dffdf\Документ Microsoft Word.docx                                                                                                                   Документ Microsoft Word.docx                       d41d8cd98f00b204e9800998ecf8427e
+.\go.mod                                                                                                                                               go.mod                                             039c9c138ce37feb4026adfbf75cbf40
+.\go.sum                                                                                                                                               go.sum                                             4b5d3c221f72be1c82f24c4822a849ac
+.\gui\general.go                                                                                                                                       general.go                                         ea921ba352e65a7a11ad157918797829
+.\hash_sum.log                                                                                                                                         hash_sum.log                                       30c9d7adbb90a11d87a036d49dcc5dcf
+.\main.go                                                                                                                                              main.go                                            b24dd83897ce5537199c47970bf1a420
